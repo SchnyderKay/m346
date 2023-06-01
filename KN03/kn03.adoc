@@ -16,3 +16,19 @@ image::img/db.png[]
 
 == B) Auftrennung von Web- und Datenbankserver
 
+=== ssh connection to db server and db login
+
+image::img/ssh_db.png[]
+
+image::img/db_login.png[]
+
+=== telnet connection
+
+image::img/telnet.png[]
+
+=== cloud init file for db
+
+link:cloud-init-db.yaml
+
+=== sites from web server
+
