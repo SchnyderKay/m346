@@ -94,3 +94,7 @@ image::img/ssh_connection_1.png[]
 === Instance with second key
 
 image::img/ssh_instance_2.png[]
+
+=== Cloud innit file
+
+link:cloud-innit.yaml[]
