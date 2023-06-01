@@ -1,0 +1,18 @@
+= KN03
+
+== A) Installation von Web- und Datenbankserver
+
+=== apache site
+
+image::img/apache.png[]
+
+=== php site
+
+image::img/php.png[]
+
+=== db site
+
+image::img/db.png[]
+
+== B) Auftrennung von Web- und Datenbankserver
+
