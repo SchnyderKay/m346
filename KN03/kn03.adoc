@@ -28,7 +28,43 @@ image::img/telnet.png[]
 
 === cloud init file for db
 
-link:cloud-init-db.yaml
+link:cloud-init-db.yaml[]
 
-=== sites from web server
+=== db site
 
+image::img/db_cloud.png[]
+
+=== php site
+
+image::img/php_cloud.png[]
+
+=== apache site
+
+image::img/apache_cloud.png[]
+
+=== db connection adminer
+
+image::img/db_login_cloud.png[]
+
+== C) Speicher
+
+=== Welchem Speichermodell wird S3 zugeordnet?
+
+Ich nehme an S3 ist warm storage, weil es für cloud-native Applikationen verwendet werden kann aber auch als Archive.
+Weshalb es sich nicht lohnt ein Hot Storage zu haben aber es evtl zu oft darauf zugegriffen wird für cold storage.
+
+=== EBS
+
+image::img/details_instance.png[]
+
+image::img/details_ebs.png[]
+
+Vor dem Löschen der Instanz sieht man eine Fehlermeldung, welche mitteilt,
+dass das EBS Volumen mit dem root Storage standard gemäss zusammen mit der Instanz gelöscht wird.
+
+image::img/instances_after_delete.png[]
+
+Nach dem Löschen der Instance sieht man, dass das Root Volumen mit der ID vol-0b08ab04d20989bf9 nicht mehr vorhanden ist.
+Das zusätzlich erstellte Volumen ist jedoch immer noch zu sehen und einfach zu keiner Instanz mehr zugeordnet.
+Dies liegt daran, dass nur Volumen gelöscht werden die als root erkennt werden und bei Ubuntu ist es standard,
+dass root Volumen über /dev/sda1 gemounted werden und nicht wie das zustäzliche Volumen in diesem Fall über /dev/sdf.

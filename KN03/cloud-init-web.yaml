@@ -11,6 +11,17 @@ users:
 ssh_pwauth: false
 disable_root: false
 package_update: true
+packages:
+  - apache2
+  - php
+  - libapache2-mod-php
+  - php-mysqli
+  - curl
+  - wget
+  - adminer
+runcmd:
+  - sudo a2enconf adminer
+  - sudo systemctl restart apache2
 write_files:
   - content: |
       <?php
@@ -21,7 +32,7 @@ write_files:
   - content: |
       <?php
         //database
-        $servername = "3.95.228.150";
+        $servername = "3.80.69.207";
         $username = "admin";
         $password = "password";
         $dbname = "mysql";
@@ -41,14 +52,3 @@ write_files:
         //var_dump($result);
       ?>
     path: /var/www/html/db.php
-packages:
-  - apache2
-  - php
-  - libapache2-mod-php
-  - php-mysqli
-  - curl
-  - wget
-  - admirer
-runcmd:
-  - sudo a2enconf adminer
-  - sudo systemctl restart apache2
