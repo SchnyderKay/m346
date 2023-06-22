@@ -1,2 +1,45 @@
 = KN04
 
+== Websites
+
+image::img/index.png[]
+
+image::img/info.png[]
+
+image::img/adminer.png[]
+
+image::img/db.png[]
+
+== Subnet
+
+image::img/subnet.png[]
+
+Subnetz mit der CIDR 172.31.170.0/28, da dies eine der noch nicht besetzten Optionen war.
+
+
+== Interface
+
+image::img/interface_db.png[]
+
+image::img/interface_web.png[]
+
+Beider Elastic IPs wurde eines der Interfaces zugeteilt. Das Network interface selbst hat eine zugeteilte Security group sowie auch die selben pulbic und private IPs wie dan nachher die Instanz haben wird.
+
+== Security groups
+
+image::img/security_db.png[]
+
+image::img/security_web.png[]
+
+Die erste security group ist für die DB dabei ist der Port 22 und 3306 nur für innerhalb des Subnets zugänglich.
+Die zweite ist für die Web Instance sind die ports 80 und 22 offen für überall.
+
+== Instances
+
+image::img/interface_web.png[]
+
+image::img/instance_db.png[]
+
+== Elastic IP
+
+image::img/elastic_ip.png[]

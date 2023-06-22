@@ -52,14 +52,14 @@ Das heisst man würde für 16 Mitarbeiter 400€ im Monat zahlen.
 image::img/Zoho.png[]
 
 Bei Zoho bin ich mir nicht sicher, ob die Standard version alles enthält, weswegen ich mich für Professional entschieden hätte.
-Somit würde ich bei Zoho 368€ im Jahr zahlen, wenn ich einen Jahresdeal abschliessen.
+Somit würde ich bei Zoho 368€ im Monat zahlen, wenn ich einen Jahresdeal abschliessen.
 
 === Fazit
 
 IaaS kosten verhältnis mässig etwas mehr, da man auch mehr selber konfigurieren kann und gesamt auch mehr Optionen zur Verfügung hat.
 Bei Zoho und Salesforce bin ich mir selber nicht ganz sicher was alles inbegriffen ist, Preismässig ist es aber auch dementsprechend deutlich günstiger als
 die AWS, Azure oder Heroku Dienste. Zusätzlich müsste man die Kosten in Betracht ziehen, die sich ansammeln durch den Aufwand die Software je nachdem anzupassen und so weiter.
-Somit sind die Kosten für das Umbauen nicht final nur anhand des Preises der Platform.
+Somit sind die Kosten für das Umbauen nicht final nur anhand des Preises der Plattform.
 
 == B) Interpretation der Resultate
 
@@ -68,7 +68,7 @@ Die Angebote unterscheiden sich schon stark, jedoch ist es nur mit dem Calculato
 Am Stärksten sieht man das es sich zwischen IaaS und SaaS unterscheidet, da auch der Umfang des inbegriffenen sehr stark variiert.
 
 === Billigstes
-Das billigste ist Zoho, da man mit 386€ im Jahr durchkommt. Jedoch bin ich nicht ganz sicher was alles inbegriffen ist in dem Deal.
+Das billigste ist Zoho, da man mit 386€ im Monat durchkommt. Jedoch bin ich nicht ganz sicher was alles inbegriffen ist in dem Deal.
 Auch an diesem Beispiel sieht man, dass SaaS günstiger ist, weil man viel weniger zur Verfügung hat.
 
 === Wieso, viel Teurer?
