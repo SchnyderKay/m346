@@ -1,0 +1,25 @@
+= KN05
+
+== Installation App
+
+=== .Net
+image::img/.net_swagger.png[]
+
+image::img/.net_swagger_ok.png[]
+
+=== Java
+image::img/java_swagger.png[]
+
+image::img/java_swagger_ok.png[]
+
+== Vertikale Skalierung
+
+=== DB
+image::img/db_storage_before.png[]
+image::img/db_storage_after.png[]
+
+=== Web
+image::img/.net_storage_before.png[]
+image::img/.net_storage_after.png[]
+
+==  Horizontale Skalierung

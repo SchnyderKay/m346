@@ -1,0 +1,22 @@
+#cloud-config
+users:
+  - name: ubuntu
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: users, admin
+    home: /home/ubuntu
+    shell: /bin/bash
+    ssh_authorized_keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCKOcSWommZS1ZiPuznLkOGxtaXyMLUK7qfNeaVKctRCIgs8AbfLOtN3EKi/9rw3qftQlka4d6kRLj8dpnmsX0cOzDH+htzI4y7LDLfDzSxAxKBD98Y4TV5RDxIEFxyzGksVdFdTRX6C+Bxmg8bgps2ASNnvJbJ8naybMW1fAqVbGqGnhrLm9UaC19E/9KwIigiwSg33DRv+HfxIrF48wp7ldSrNnzgVLD4L9BR5T1mpLk1wsnDA+97t4nZKLBz2yFUeBfoN9YXX8f92lO6LlKiSgHl3rK5rOxN65nP70R1PuVvaq8Bm5AEUgvf6GRe+G7gx7fLsWNOLFlK7vtFiu8x aws-key #personal
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0WGP1EZykEtv5YGC9nMiPFW3U3DmZNzKFO5nEu6uozEHh4jLZzPNHSrfFTuQ2GnRDSt+XbOtTLdcj26+iPNiFoFha42aCIzYjt6V8Z+SQ9pzF4jPPzxwXfDdkEWylgoNnZ+4MG1lNFqa8aO7F62tX0Yj5khjC0Bs7Mb2cHLx1XZaxJV6qSaulDuBbLYe8QUZXkMc7wmob3PM0kflfolR3LE7LResIHWa4j4FL6r5cQmFlDU2BDPpKMFMGUfRSFiUtaWBNXFOWHQBC2+uKmuMPYP4vJC9sBgqMvPN/X2KyemqdMvdKXnCfrzadHuSSJYEzD64Cve5Zl9yVvY4AqyBD aws-key #teacher
+ssh_pwauth: true
+disable_root: false
+package_update: true
+packages:
+  - mariadb-server
+runcmd:
+  - sudo mysql -sfu root -e "GRANT ALL ON *.* TO 'admin'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;"
+  - sudo sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/mariadb.conf.d/50-server.cnf
+  - sudo systemctl restart mariadb.service
+  - sudo cd /home/ubuntu
+  - sudo git clone https://gitlab.com/ch-tbz-it/Stud/m346/m346scripts.git
+  - sudo mysql -sfu root < ./m346scripts/KN05/shop-database.sql
