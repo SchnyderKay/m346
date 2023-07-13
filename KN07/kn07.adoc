@@ -1,0 +1,18 @@
+= KN07
+
+== Backup
+
+=== After cleanup
+image::img/after_cleanup.png[]
+
+=== before cleanup
+image::img/before_cleanup.png[]
+
+Bei einem der beiden Snapshots habe ich den Tag-Value auf 2023-07-12 gesetzt, damit das Cleanup-Script den Snapshot entfernt.
+
+=== instance with tags
+image::img/instance.png[]
+
+== Cron-Job
+image::img/cron_backup.png[]
+image::img/scheduled_targets.png[]

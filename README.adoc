@@ -16,5 +16,6 @@ link:KN04/kn04.adoc[]
 link:KN06/kn06.adoc[]
 
 == KN07
+link:KN07/kn07.adoc[]
 
 == KN08
